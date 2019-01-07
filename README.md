@@ -1,7 +1,7 @@
 # Scansnap-ix500-Linux
 Support the ix500 on Linux (Ubuntu 14.04 LTS in this case, but universal)
 
-When you have an ix500 on Ubuntu 14.04, the OS is running libsane 1.0.23. At the time of writing (January 29th, 2015) the lastest SANE backend is 1.0.25.
+When you have an ix500 on Ubuntu 14.04, the OS is running libsane 1.0.23. At the time of writing (January 29th, 2015) the latest SANE backend is 1.0.25.
 
 Simply apply the following to support the ix500 in any SANE-capable application:
 
@@ -38,6 +38,7 @@ Once successful, update libraries:
 
 ```ldconfig```
 
+
 <b>Disable SANEd if you're not scanning to the network</b> by editing /etc/default/saned on Ubuntu so that RUN=yes is RUN=no.
 
 Open up the scanner so it turns on, then find the scanner and add it to Ubuntu's visible scanner list:
@@ -55,5 +56,6 @@ If this works, try running simple-scan as a regular user. If you can't see the s
 ```echo -e "\n#ScanSnap ix500\nATTRS{idVendor}=="04c5", ATTRS{idProduct}=="132b", ENV{libsane_matched}="yes"" >> /etc/udev/rules.d/40-fujitsu.rules```
 
 ```service udev reload```
+
 
 Finally, unplug and reconnect the scanner and you should see it in the client applications.
