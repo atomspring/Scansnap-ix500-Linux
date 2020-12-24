@@ -13,7 +13,7 @@ So, you've got the needed stuff to build SANE, and you've removed the stale stuf
 
 ``` cd /usr/src ```
 
-```git clone git://git.debian.org/sane/sane-backends.git ```
+```git clone https://salsa.debian.org/debian/sane-backends.git ```
 
 ```cd sane-backends ```
 
